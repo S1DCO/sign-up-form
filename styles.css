@@ -1,0 +1,20 @@
+@font-face {
+  font-family: my-nerve;
+  src: url(/Mynerve/Mynerve-Regular.ttf);
+}
+:root {
+  --left-container-width: 35%;
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  width: 100vw;
+}
+
+#left-container {
+  width: var(--left-container-width);
+}
+#right-container {
+  width: calc(100%-var(--left-container-width));
+}
