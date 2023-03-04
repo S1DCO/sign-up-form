@@ -6,6 +6,9 @@
   --left-container-width: 35%;
   --right-container-width: calc(100%-var(--left-container-width));
 
+  --light-grey: #ededed;
+  --light-green: #90ee90;
+
   font-family: my-nerve, cursive;
 }
 * {
@@ -17,17 +20,66 @@ body {
   max-height: 100vh;
   display: flex;
 }
-
 #left-container {
   min-width: var(--left-container-width);
   background-image: url(rick-rothenberg-3gDOhoy-MDM-unsplash.jpg);
   background-size: cover;
   background-position: center center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+#left-container > div {
+  background-color: black;
+  opacity: 0.4;
+  height: min-content;
+}
+#left-container > div > p {
+  color: white;
+  font-size: 4rem;
 }
 #right-container {
   min-width: var(--right-container-width);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+#right-container > div {
+  margin-bottom: 1em;
+  font-size: 1.5rem;
+}
+#right-container > div > p:first-child {
+  margin-bottom: 1em;
+}
+label,
+input {
+  display: block;
 }
 
 fieldset {
-  box-shadow: 0px 10px 6px black;
+  background-color: var(--light-grey);
+  border: 2px solid black;
+  padding: 0.5em;
+  box-shadow: 0px 5px 5px black;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 0.3em;
+}
+legend {
+  border: 2px solid black;
+  padding: 0.3em;
+  background-color: var(--light-grey);
+  margin-bottom: 0.6em;
+}
+#below-form > p,
+a {
+  font-size: 1rem;
+}
+
+#btn-create-account {
+  background-color: var(--light-green);
+  border-radius: 7px;
+  margin-top: 3em;
+  margin-bottom: 1em;
 }
